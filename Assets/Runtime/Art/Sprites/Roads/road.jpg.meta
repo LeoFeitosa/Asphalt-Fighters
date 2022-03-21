@@ -136,9 +136,9 @@ TextureImporter:
       name: road_1
       rect:
         serializedVersion: 2
-        x: 2611
+        x: 2613
         y: 0
-        width: 843
+        width: 839
         height: 5000
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -157,9 +157,9 @@ TextureImporter:
       name: road_2
       rect:
         serializedVersion: 2
-        x: 4046
+        x: 4048
         y: 0
-        width: 530
+        width: 527
         height: 5000
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
