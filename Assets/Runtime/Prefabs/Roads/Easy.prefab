@@ -209,5 +209,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0299f5d00162c584588538b753699868, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 16
+  _maxSpeed: 15
   _prefabRoad: {fileID: 2216943385648221099}

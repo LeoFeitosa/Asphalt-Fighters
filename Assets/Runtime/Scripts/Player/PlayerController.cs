@@ -8,6 +8,8 @@ public class PlayerController : MonoBehaviour
     Vector3 moveDirections;
 
     [SerializeField] float speed = 1.0f;
+    [SerializeField] float _acceleration = 0.002f;
+    public float Velocity { get; private set; }
 
     void Awake()
     {
@@ -23,6 +25,7 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         Move();
+        Accelerator();
     }
 
     private void Move()
@@ -32,6 +35,11 @@ public class PlayerController : MonoBehaviour
 
         MoveKeyboard(directionKeyboard);
         MoveTouch(directionTouch);
+    }
+
+    void Accelerator()
+    {
+        Velocity += _acceleration;
     }
 
     void MoveKeyboard(float move)

@@ -366,6 +366,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3.5
+  _acceleration: 0.029
 --- !u!114 &1460566912
 MonoBehaviour:
   m_ObjectHideFlags: 0

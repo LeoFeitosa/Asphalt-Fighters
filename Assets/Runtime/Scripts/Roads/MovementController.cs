@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class MovementController : MonoBehaviour
 {
-    [SerializeField] float _speed;
+    [SerializeField] float _maxSpeed;
     [SerializeField] Object _prefabRoad;
 
+    PlayerController _playerController;
+    float _currentSpeed;
     bool _permissionToInstantiate;
     int _numberOfChildObjects;
     int _fullSize;
@@ -14,6 +16,7 @@ public class MovementController : MonoBehaviour
 
     void Awake()
     {
+        _playerController = FindObjectOfType<PlayerController>();
         _numberOfChildObjects = GetComponentsInChildren<SpriteRenderer>().Length;
         _fullSize = (int)GetComponentInChildren<SpriteRenderer>().bounds.size.y;
     }
@@ -21,9 +24,10 @@ public class MovementController : MonoBehaviour
     void Start()
     {
         _position = transform.position;
+        _currentSpeed = _playerController.Velocity;
     }
 
-    void FixedUpdate()
+    void Update()
     {
         EnableInstantiate();
         MoveHorizontal();
@@ -33,7 +37,17 @@ public class MovementController : MonoBehaviour
 
     void MoveHorizontal()
     {
-        _position.y -= _speed * Time.fixedDeltaTime;
+        if (_currentSpeed < _maxSpeed)
+        {
+            _currentSpeed = _playerController.Velocity;
+        }
+        else
+        {
+            _currentSpeed = _maxSpeed;
+        }
+
+        _position.y -= _currentSpeed * Time.deltaTime;
+
         this.transform.position = _position;
     }
 
