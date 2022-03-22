@@ -312,7 +312,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5830545998164113286, guid: 4194f08d7ec96e742bdd92056d6db7ac, type: 3}
       propertyPath: m_Name
-      value: taxi
+      value: Taxi
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4194f08d7ec96e742bdd92056d6db7ac, type: 3}
@@ -579,7 +579,7 @@ GameObject:
   - component: {fileID: 1440256679}
   - component: {fileID: 1440256680}
   m_Layer: 0
-  m_Name: Cars
+  m_Name: CarsAndObstacles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -611,6 +611,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab05a61859927864288ef3ee49d5fda3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _secondsToStartSpawn: 5
   _prefabCars:
   - {fileID: 549165627538930085, guid: d2c4873066c3a3640918029ed89b5f40, type: 3}
   - {fileID: 6761985675147458960, guid: 2a74ba05e24d00e4f85fd8c71f5efb75, type: 3}
@@ -620,7 +621,12 @@ MonoBehaviour:
   - {fileID: 3347545490566834120, guid: 25ec1a1ae6d5fad47b5ec29e29e68b7e, type: 3}
   - {fileID: 5830545998164113286, guid: 4194f08d7ec96e742bdd92056d6db7ac, type: 3}
   - {fileID: 2239013906355579106, guid: aeffceb205976154ab1c218db6576623, type: 3}
+  - {fileID: 7726116066115315121, guid: 68fab19ad3b138b4aa713e6842486000, type: 3}
+  _prefabObstacles:
+  - {fileID: 7726116066115315121, guid: 68fab19ad3b138b4aa713e6842486000, type: 3}
   _spawnPoint: {fileID: 1763374963}
+  _minSecondsToSpawn: 0.2
+  _maxSecondsToSpawn: 2
 --- !u!4 &1676904687 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2216943385648221098, guid: c717d3abd11043546b3dc183e66d0947, type: 3}
@@ -744,7 +750,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2239013906355579106, guid: aeffceb205976154ab1c218db6576623, type: 3}
       propertyPath: m_Name
-      value: truck
+      value: Truck
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aeffceb205976154ab1c218db6576623, type: 3}

@@ -33,14 +33,18 @@ public class MovementDownOpponentController : MonoBehaviour
 
     void RandomX()
     {
+        float rand = 0;
+
         if (Random.value > 0.5)
         {
-            _position.x = 1;
+            rand = Random.Range(-1.7f, -0.32f);
         }
         else
         {
-            _position.x = -1;
+            rand = Random.Range(0.32f, 1.7f);
         }
+
+        _position.x = rand;
     }
 
     void OnBecameInvisible()
