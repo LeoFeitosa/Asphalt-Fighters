@@ -33,7 +33,6 @@ public class MovementDownOpponentController : MonoBehaviour
 
     void RandomX()
     {
-        Debug.Log(Random.value);
         if (Random.value > 0.5)
         {
             _position.x = 1;
