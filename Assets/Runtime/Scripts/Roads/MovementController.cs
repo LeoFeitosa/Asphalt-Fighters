@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class MovementController : MonoBehaviour
 {
-    [SerializeField] float _maxSpeed;
     [SerializeField] Object _prefabRoad;
 
     PlayerController _playerController;
+    PlayerCollidersController _playerCollider;
     float _currentSpeed;
     bool _permissionToInstantiate;
     int _numberOfChildObjects;
@@ -17,6 +17,7 @@ public class MovementController : MonoBehaviour
     void Awake()
     {
         _playerController = FindObjectOfType<PlayerController>();
+        _playerCollider = FindObjectOfType<PlayerCollidersController>();
         _numberOfChildObjects = GetComponentsInChildren<SpriteRenderer>().Length;
         _fullSize = (int)GetComponentInChildren<SpriteRenderer>().bounds.size.y;
     }
@@ -37,23 +38,17 @@ public class MovementController : MonoBehaviour
 
     void MoveHorizontal()
     {
-        if (_currentSpeed < _maxSpeed)
+        if (!_playerCollider.FinishedThePhase)
         {
             _currentSpeed = _playerController.Velocity;
+            _position.y -= _currentSpeed * Time.deltaTime;
+            this.transform.position = _position;
         }
-        else
-        {
-            _currentSpeed = _maxSpeed;
-        }
-
-        _position.y -= _currentSpeed * Time.deltaTime;
-
-        this.transform.position = _position;
     }
 
     void InstantiateNewRoad()
     {
-        if ((int)Mathf.Abs(this.transform.position.y) == _fullSize && _permissionToInstantiate)
+        if ((int)Mathf.Abs(this.transform.position.y) == _fullSize && _permissionToInstantiate && !_playerCollider.FinishedThePhase)
         {
             DisableInstantiate();
             Instantiate(_prefabRoad, new Vector3(0, this.transform.position.y + _fullSize * _numberOfChildObjects, 0), Quaternion.identity);

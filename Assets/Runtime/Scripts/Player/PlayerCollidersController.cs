@@ -4,17 +4,11 @@ using UnityEngine;
 
 public class PlayerCollidersController : MonoBehaviour
 {
-    [SerializeField] BoxCollider2D _boxCollider2D;
+    public bool FinishedThePhase { get; private set; }
 
     void Start()
     {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+        FinishedThePhase = false;
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -33,6 +27,11 @@ public class PlayerCollidersController : MonoBehaviour
         {
             CrashIntoTheCar();
         }
+
+        if (collision.gameObject.CompareTag(TagsConstants.Finish))
+        {
+            FinishLevel();
+        }
     }
 
     void SlipInTheGrease()
@@ -48,5 +47,11 @@ public class PlayerCollidersController : MonoBehaviour
     void CrashIntoTheCar()
     {
         Debug.Log("Bateu no carro");
+    }
+
+    void FinishLevel()
+    {
+        Debug.Log("Finiallllll");
+        FinishedThePhase = true;
     }
 }

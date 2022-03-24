@@ -2,16 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovementObstacleController : MonoBehaviour
+public class MovementFixedController : MonoBehaviour
 {
-    [SerializeField] float _maxSpeed;
+    [SerializeField] bool _fixedPosition;
     PlayerController _playerController;
     float _currentSpeed;
     Vector3 _position;
 
-    void Start()
+    void Awake()
     {
         _playerController = FindObjectOfType<PlayerController>();
+    }
+
+    void Start()
+    {
         _position = transform.position;
         RandomX();
     }
@@ -24,14 +28,7 @@ public class MovementObstacleController : MonoBehaviour
 
     void MoveHorizontal()
     {
-        if (_currentSpeed < _maxSpeed)
-        {
-            _currentSpeed = _playerController.Velocity;
-        }
-        else
-        {
-            _currentSpeed = _maxSpeed;
-        }
+        _currentSpeed = _playerController.Velocity;
 
         _position.y -= _currentSpeed * Time.deltaTime;
 
@@ -40,9 +37,12 @@ public class MovementObstacleController : MonoBehaviour
 
     void RandomX()
     {
-        float rand = 0;
-        rand = Random.Range(-1.7f, 1.7f);
-        _position.x = rand;
+        if (!_fixedPosition)
+        {
+            float rand = 0;
+            rand = Random.Range(-1.7f, 1.7f);
+            _position.x = rand;
+        }
     }
 
     void OnBecameInvisible()

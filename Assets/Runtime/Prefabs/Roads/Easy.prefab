@@ -210,8 +210,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0299f5d00162c584588538b753699868, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxSpeed: 11
   _prefabRoad: {fileID: 2216943385648221099}
+  _movementDuration: 5
 --- !u!1 &4702908733088777819
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,11 +12,20 @@ public class SpawnOpponentsController : MonoBehaviour
     [SerializeField] GameObject[] _prefabObstacles;
     [SerializeField] Transform _spawnPoint;
     GameObject[] _opponents;
+    [SerializeField] GameObject _finishComponent;
 
     [Header("Random Time To Spawn Cars")]
     [SerializeField] float _minSecondsToSpawn = 0.5f;
     [SerializeField] float _maxSecondsToSpawn = 3;
 
+    GameManager _gameManager;
+    PlayerCollidersController _player;
+
+    void Awake()
+    {
+        _gameManager = FindObjectOfType<GameManager>();
+        _player = FindObjectOfType<PlayerCollidersController>();
+    }
 
     void Start()
     {
@@ -31,10 +40,18 @@ public class SpawnOpponentsController : MonoBehaviour
 
     IEnumerator Spawn()
     {
-        float seconds = Random.Range(_minSecondsToSpawn, _maxSecondsToSpawn);
+        if (!_gameManager.IsMoving)
+        {
+            _finishComponent.SetActive(true);
+        }
 
+        float seconds = Random.Range(_minSecondsToSpawn, _maxSecondsToSpawn);
         Instantiate(_opponents[Random.Range(0, _opponents.Length)], _spawnPoint.position, Quaternion.identity);
         yield return new WaitForSeconds(seconds);
-        StartCoroutine(Spawn());
+
+        if (!_player.FinishedThePhase)
+        {
+            StartCoroutine(Spawn());
+        }
     }
 }

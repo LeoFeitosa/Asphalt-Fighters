@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7726116066115315127}
   - component: {fileID: 7726116066115315120}
-  - component: {fileID: 4202107724530911560}
   - component: {fileID: -1965224357146001036}
+  - component: {fileID: 4202107724530911560}
   m_Layer: 0
   m_Name: Grease
   m_TagString: Grease
@@ -84,19 +84,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4202107724530911560
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7726116066115315121}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 138f884a1a2a4eb4e85f90f5aea0d099, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _maxSpeed: 11
 --- !u!61 &-1965224357146001036
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -123,3 +110,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.3, y: 0.8}
   m_EdgeRadius: 0
+--- !u!114 &4202107724530911560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7726116066115315121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 138f884a1a2a4eb4e85f90f5aea0d099, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _fixedPosition: 0
