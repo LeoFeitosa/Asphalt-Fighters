@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7726116066115315120}
   - component: {fileID: -1965224357146001036}
   - component: {fileID: 4202107724530911560}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Grease
   m_TagString: Grease
   m_Icon: {fileID: 0}

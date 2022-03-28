@@ -182,7 +182,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: f4b77b558ead9814b9da4ec709b3b0f8, type: 3}
 --- !u!4 &51191822 stripped
 Transform:
@@ -248,7 +249,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 296d0a1d2da6c934499653e3747029c7, type: 3}
 --- !u!4 &194149707 stripped
 Transform:
@@ -284,7 +286,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ed9f09137f61d44da5434d57b86db4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _levelDuration: 10
+  _levelDuration: 15
 --- !u!4 &216457236
 Transform:
   m_ObjectHideFlags: 0
@@ -358,7 +360,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Taxi
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 4194f08d7ec96e742bdd92056d6db7ac, type: 3}
 --- !u!4 &486320631 stripped
 Transform:
@@ -685,7 +688,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 2a74ba05e24d00e4f85fd8c71f5efb75, type: 3}
 --- !u!4 &660180790 stripped
 Transform:
@@ -858,7 +862,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mini_van
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 411ced3b39f651e459ff028c0bc0b3c6, type: 3}
 --- !u!4 &1140866763 stripped
 Transform:
@@ -921,9 +926,10 @@ MonoBehaviour:
   - {fileID: 2239013906355579106, guid: aeffceb205976154ab1c218db6576623, type: 3}
   _prefabObstacles:
   - {fileID: 7726116066115315121, guid: 68fab19ad3b138b4aa713e6842486000, type: 3}
+  - {fileID: 7726116066115315121, guid: 68fab19ad3b138b4aa713e6842486000, type: 3}
   _spawnPoint: {fileID: 1763374963}
   _finishComponent: {fileID: 1862705012}
-  _minSecondsToSpawn: 0.2
+  _minSecondsToSpawn: 0.26
   _maxSecondsToSpawn: 2
 --- !u!4 &1676904687 stripped
 Transform:
@@ -1003,7 +1009,7 @@ GameObject:
   - component: {fileID: 1862705015}
   - component: {fileID: 1862705016}
   - component: {fileID: 1862705014}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FinishRace
   m_TagString: Finish
   m_Icon: {fileID: 0}
@@ -1173,7 +1179,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Truck
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: aeffceb205976154ab1c218db6576623, type: 3}
 --- !u!4 &1979022389 stripped
 Transform:
@@ -1359,6 +1366,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2414313354858388236, guid: b01f25c6f2630074797d6b2e08d61d0d, type: 3}
+      propertyPath: _maxSpeed
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 2414313354858388237, guid: b01f25c6f2630074797d6b2e08d61d0d, type: 3}
       propertyPath: m_Name
       value: Player
@@ -1373,7 +1384,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2414313354858388466, guid: b01f25c6f2630074797d6b2e08d61d0d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.6
+      value: -2.7
       objectReference: {fileID: 0}
     - target: {fileID: 2414313354858388466, guid: b01f25c6f2630074797d6b2e08d61d0d, type: 3}
       propertyPath: m_LocalPosition.z

@@ -10,8 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 214425387085302023}
   - component: {fileID: 8036900162340919286}
-  - component: {fileID: -1889630003648029230}
+  - component: {fileID: 2182295989455180676}
   - component: {fileID: 88824876872081621}
+  - component: {fileID: -1889630003648029230}
+  - component: {fileID: -6447186322060888829}
   m_Layer: 3
   m_Name: Truck
   m_TagString: Cars
@@ -84,21 +86,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-1889630003648029230
-MonoBehaviour:
+--- !u!50 &2182295989455180676
+Rigidbody2D:
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2239013906355579106}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae9126ade94041747a5bdd30714ea3fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _speedDown: 6
-  _timeToDestroy: 8
-  enableMove: 1
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
 --- !u!61 &88824876872081621
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -125,3 +133,32 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.26, y: 0.68}
   m_EdgeRadius: 0
+--- !u!114 &-1889630003648029230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2239013906355579106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae9126ade94041747a5bdd30714ea3fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speedDown: 6
+  _timeToDestroy: 8
+  enableMove: 1
+--- !u!114 &-6447186322060888829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2239013906355579106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 722ff6f3c11ce3d4b93848514f9b844b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _closePassageY: 3.5
+  _speed: 1.3

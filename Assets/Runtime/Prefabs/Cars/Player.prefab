@@ -82,7 +82,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 0.5
-  _maxSpeed: 11
+  _maxSpeed: 12
   _acceleration: 0.029
 --- !u!114 &1460566911
 MonoBehaviour:
@@ -96,7 +96,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 068e55b0894839e4fa69d8fe5c1482d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _boxCollider2D: {fileID: 2414313354957252944}
 --- !u!1 &2414313354957252946
 GameObject:
   m_ObjectHideFlags: 0
@@ -107,7 +106,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2414313354957252945}
   - component: {fileID: 2414313354957252944}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Colliders
   m_TagString: Player
   m_Icon: {fileID: 0}

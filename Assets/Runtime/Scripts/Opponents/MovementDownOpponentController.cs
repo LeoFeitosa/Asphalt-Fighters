@@ -37,11 +37,11 @@ public class MovementDownOpponentController : MonoBehaviour
 
         if (Random.value > 0.5)
         {
-            rand = Random.Range(-1.7f, -0.32f);
+            rand = Random.Range(-1.7f, -0.3f);
         }
         else
         {
-            rand = Random.Range(0.32f, 1.7f);
+            rand = Random.Range(0.3f, 1.7f);
         }
 
         _position.x = rand;

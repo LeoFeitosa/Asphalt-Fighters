@@ -51,7 +51,6 @@ public class PlayerCollidersController : MonoBehaviour
 
     void FinishLevel()
     {
-        Debug.Log("Finiallllll");
         FinishedThePhase = true;
     }
 }

@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2623466280506092562}
   - component: {fileID: 3691490791468156727}
-  - component: {fileID: -7165067431498531355}
   - component: {fileID: -3973747237307005226}
+  - component: {fileID: -7165067431498531355}
   m_Layer: 3
   m_Name: Taxi
   m_TagString: Cars
@@ -84,21 +84,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-7165067431498531355
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5830545998164113286}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae9126ade94041747a5bdd30714ea3fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _speedDown: 6
-  _timeToDestroy: 8
-  enableMove: 1
 --- !u!61 &-3973747237307005226
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -125,3 +110,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.33, y: 0.68}
   m_EdgeRadius: 0
+--- !u!114 &-7165067431498531355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5830545998164113286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae9126ade94041747a5bdd30714ea3fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speedDown: 6
+  _timeToDestroy: 8
+  enableMove: 1

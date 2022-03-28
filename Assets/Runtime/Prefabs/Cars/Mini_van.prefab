@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1278897668608206432}
   - component: {fileID: 1535176922190135380}
-  - component: {fileID: 3433860622609506819}
   - component: {fileID: 5568659820339739620}
+  - component: {fileID: 3433860622609506819}
   m_Layer: 3
   m_Name: Mini_van
   m_TagString: Cars
@@ -84,21 +84,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3433860622609506819
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3508175860074962262}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae9126ade94041747a5bdd30714ea3fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _speedDown: 6
-  _timeToDestroy: 8
-  enableMove: 1
 --- !u!61 &5568659820339739620
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -125,3 +110,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.27, y: 0.68}
   m_EdgeRadius: 0
+--- !u!114 &3433860622609506819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3508175860074962262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae9126ade94041747a5bdd30714ea3fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speedDown: 6
+  _timeToDestroy: 8
+  enableMove: 1

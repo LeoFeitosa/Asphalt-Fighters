@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6114351895106355985}
   - component: {fileID: 8859411325167365449}
-  - component: {fileID: -2097370454620800794}
   - component: {fileID: 6374181328817462506}
+  - component: {fileID: -2097370454620800794}
   m_Layer: 3
   m_Name: Car_orange
   m_TagString: Cars
@@ -84,21 +84,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-2097370454620800794
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1257918779920092720}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae9126ade94041747a5bdd30714ea3fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _speedDown: 6
-  _timeToDestroy: 8
-  enableMove: 1
 --- !u!61 &6374181328817462506
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -125,3 +110,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.3, y: 0.68}
   m_EdgeRadius: 0
+--- !u!114 &-2097370454620800794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1257918779920092720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae9126ade94041747a5bdd30714ea3fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speedDown: 6
+  _timeToDestroy: 8
+  enableMove: 1
