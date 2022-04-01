@@ -4,7 +4,13 @@ using UnityEngine;
 
 public class PlayerCollidersController : MonoBehaviour
 {
+    PlayerAnimatorController _animatorController;
     public bool FinishedThePhase { get; private set; }
+
+    void Awake()
+    {
+        _animatorController = GetComponent<PlayerAnimatorController>();
+    }
 
     void Start()
     {
@@ -46,6 +52,7 @@ public class PlayerCollidersController : MonoBehaviour
 
     void CrashIntoTheCar()
     {
+        _animatorController.Hit();
         Debug.Log("Bateu no carro");
     }
 

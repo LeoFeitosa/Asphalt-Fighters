@@ -286,7 +286,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ed9f09137f61d44da5434d57b86db4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _levelDuration: 15
+  _levelDuration: 60
 --- !u!4 &216457236
 Transform:
   m_ObjectHideFlags: 0
@@ -1366,10 +1366,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2414313354858388236, guid: b01f25c6f2630074797d6b2e08d61d0d, type: 3}
-      propertyPath: _maxSpeed
-      value: 12
-      objectReference: {fileID: 0}
     - target: {fileID: 2414313354858388237, guid: b01f25c6f2630074797d6b2e08d61d0d, type: 3}
       propertyPath: m_Name
       value: Player

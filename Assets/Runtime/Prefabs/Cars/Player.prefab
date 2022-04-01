@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2414313354858388467}
   - component: {fileID: 2414313354858388236}
   - component: {fileID: 1460566911}
+  - component: {fileID: 2414313354037207157}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -83,7 +84,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 0.5
   _maxSpeed: 12
-  _acceleration: 0.029
+  _acceleration: 0.028
 --- !u!114 &1460566911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -96,6 +97,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 068e55b0894839e4fa69d8fe5c1482d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2414313354037207157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2414313354858388237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1bf700a0c9ed274bb5a757d5469aced, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 390
+  _timeLimitInclination: 1
+  _timeLimitRotate: 3
+  _degreesOfIncline: 30
 --- !u!1 &2414313354957252946
 GameObject:
   m_ObjectHideFlags: 0
@@ -140,7 +157,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.004, y: 0}
+  m_Offset: {x: -0.004, y: 0.08}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
