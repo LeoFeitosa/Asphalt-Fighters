@@ -84,7 +84,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 0.5
   _maxSpeed: 12
-  _acceleration: 0.028
+  _acceleration: 0.015
+  _maximumSpeedAfterCollision: 8
+  _maximumSpeedAfterDoubleCollision: 4
+  _percentageSpeedMoveAfterCollision: 35
+  _percentageSpeedMoveAfterDoubleCollision: 20
 --- !u!114 &1460566911
 MonoBehaviour:
   m_ObjectHideFlags: 0

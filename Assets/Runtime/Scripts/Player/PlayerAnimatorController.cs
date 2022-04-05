@@ -7,6 +7,9 @@ public class PlayerAnimatorController : MonoBehaviour
     [SerializeField] float _timeLimitInclination;
     [SerializeField] float _timeLimitRotate;
     [SerializeField] float _degreesOfIncline;
+
+    public int CountHit { get; private set; }
+
     float _timeMove;
     int _countHit;
     bool _enableRandom;
@@ -17,6 +20,11 @@ public class PlayerAnimatorController : MonoBehaviour
         _timeMove = 0;
         _countHit = 0;
         _enableRandom = true;
+    }
+
+    void Update()
+    {
+        CountHit = _countHit;
     }
 
     void FixedUpdate()
@@ -74,12 +82,14 @@ public class PlayerAnimatorController : MonoBehaviour
             _enableRandom = true;
             _timeMove = 0;
             _countHit = 0;
+            CountHit = 0;
         }
     }
 
     public void Hit()
     {
         _countHit++;
+        CountHit = _countHit;
     }
 
     void RandomizeRotationDirection()
