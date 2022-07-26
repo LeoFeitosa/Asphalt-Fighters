@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class PlayerAnimatorController : MonoBehaviour
 {
+    [SerializeField] GameObject[] _explosionsPrefab;
     [SerializeField] float _speed;
     [SerializeField] float _timeLimitInclination;
     [SerializeField] float _timeLimitRotate;
@@ -109,5 +110,12 @@ public class PlayerAnimatorController : MonoBehaviour
                 _direction = -1;
             }
         }
+    }
+
+    public void Explosion()
+    {
+        FindObjectOfType<SpriteRenderer>().enabled = false;
+        FindObjectOfType<BoxCollider2D>().enabled = false;
+        Instantiate(_explosionsPrefab[0], transform.position, transform.rotation);
     }
 }

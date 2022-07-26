@@ -31,7 +31,14 @@ public class PlayerCollidersController : MonoBehaviour
 
         if (collision.gameObject.CompareTag(TagsConstants.Cars))
         {
-            CrashIntoTheCar();
+            if (_animatorController.CountHit == 2)
+            {
+                _animatorController.Explosion();
+            }
+            else
+            {
+                CrashIntoTheCar();
+            }
         }
 
         if (collision.gameObject.CompareTag(TagsConstants.Finish))
@@ -43,11 +50,12 @@ public class PlayerCollidersController : MonoBehaviour
     void SlipInTheGrease()
     {
         _animatorController.Hit();
-       Debug.Log("Escorregou no oleo");
+        Debug.Log("Escorregou no oleo");
     }
 
     void HitThePavement()
     {
+        _animatorController.Explosion();
         Debug.Log("Bateu na calcada");
     }
 
