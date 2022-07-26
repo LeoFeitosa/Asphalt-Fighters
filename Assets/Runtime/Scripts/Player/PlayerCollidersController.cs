@@ -42,18 +42,19 @@ public class PlayerCollidersController : MonoBehaviour
 
     void SlipInTheGrease()
     {
-       // Debug.Log("Escorregou no oleo");
+        _animatorController.Hit();
+       Debug.Log("Escorregou no oleo");
     }
 
     void HitThePavement()
     {
-        //Debug.Log("Bateu na calcada");
+        Debug.Log("Bateu na calcada");
     }
 
     void CrashIntoTheCar()
     {
         _animatorController.Hit();
-        //Debug.Log("Bateu no carro");
+        Debug.Log("Bateu no carro");
     }
 
     void FinishLevel()

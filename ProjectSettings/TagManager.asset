@@ -45,12 +45,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Player
-    uniqueID: 3687201701
+  - name: Obstacles
+    uniqueID: 1498443437
     locked: 0
   - name: Cars
     uniqueID: 1068960735
     locked: 0
-  - name: Obstacles
-    uniqueID: 1498443437
+  - name: Player
+    uniqueID: 3687201701
     locked: 0
