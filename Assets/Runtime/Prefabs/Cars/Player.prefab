@@ -121,6 +121,9 @@ MonoBehaviour:
   _timeLimitInclination: 1
   _timeLimitRotate: 3
   _degreesOfIncline: 30
+  _delay: 3
+  _blink: 0.1
+  _count: 7
 --- !u!95 &408773216
 Animator:
   serializedVersion: 4
@@ -208,7 +211,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1050835724535989368, guid: 4c928e4e3959646439fbd0b03e9613b5, type: 3}
       propertyPath: m_SortingLayer
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1050835724535989368, guid: 4c928e4e3959646439fbd0b03e9613b5, type: 3}
       propertyPath: m_SortingLayerID
