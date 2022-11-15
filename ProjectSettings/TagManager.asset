@@ -45,6 +45,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Explosions
+    uniqueID: 555290069
+    locked: 0
   - name: Obstacles
     uniqueID: 1498443437
     locked: 0
