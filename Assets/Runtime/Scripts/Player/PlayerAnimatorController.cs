@@ -116,6 +116,6 @@ public class PlayerAnimatorController : MonoBehaviour
     {
         FindObjectOfType<SpriteRenderer>().enabled = false;
         FindObjectOfType<BoxCollider2D>().enabled = false;
-        Instantiate(_explosionsPrefab[0], transform.position, transform.rotation);
+        Instantiate(_explosionsPrefab[Random.Range(0, _explosionsPrefab.Length)], transform.position, transform.rotation);
     }
 }
