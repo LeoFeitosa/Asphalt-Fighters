@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class PlayerCollidersController : MonoBehaviour
 {
+    [SerializeField] float _timeToRevive;
+
     PlayerAnimatorController _animatorController;
+    public bool Dead { get; private set; }
     public bool FinishedThePhase { get; private set; }
 
     void Awake()
@@ -14,6 +17,7 @@ public class PlayerCollidersController : MonoBehaviour
 
     void Start()
     {
+        Dead = false;
         FinishedThePhase = false;
     }
 
@@ -34,6 +38,7 @@ public class PlayerCollidersController : MonoBehaviour
             if (_animatorController.CountHit == 2)
             {
                 _animatorController.Explosion();
+                StartCoroutine(TimeToDead(_timeToRevive));
             }
             else
             {
@@ -56,6 +61,7 @@ public class PlayerCollidersController : MonoBehaviour
     void HitThePavement()
     {
         _animatorController.Explosion();
+        StartCoroutine(TimeToDead(_timeToRevive));
         Debug.Log("Bateu na calcada");
     }
 
@@ -68,5 +74,13 @@ public class PlayerCollidersController : MonoBehaviour
     void FinishLevel()
     {
         FinishedThePhase = true;
+    }
+
+    IEnumerator TimeToDead(float time)
+    {
+        Dead = true;
+        yield return new WaitForSeconds(time);
+        Dead = false;
+        yield return null;
     }
 }
