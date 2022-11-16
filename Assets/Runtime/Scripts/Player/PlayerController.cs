@@ -19,10 +19,13 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float _acceleration = 0.002f;
 
     [Header("After Collision")]
+    [SerializeField] float _maximumSpeedAfterExplosion;
     [SerializeField] float _maximumSpeedAfterCollision;
     [SerializeField] float _maximumSpeedAfterDoubleCollision;
     [SerializeField] float _percentageSpeedMoveAfterCollision;
     [SerializeField] float _percentageSpeedMoveAfterDoubleCollision;
+    [SerializeField] float _percentageSpeedMoveAfterExplosion;
+
 
     public float Velocity { get; private set; }
 
@@ -83,6 +86,12 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    void SetSpeedAfterExplosion()
+    {
+        _currentSpeed = _maximumSpeedAfterExplosion;
+        _currentSpeedMove = GetPercentage(_speed, _percentageSpeedMoveAfterExplosion);
+    }
+
     void SetSpeedAfterCollision()
     {
         _currentSpeed = _maximumSpeedAfterCollision;
@@ -104,7 +113,12 @@ public class PlayerController : MonoBehaviour
 
     void SetSpeed()
     {
-        if (_animatorController.CountHit == 1)
+        if (_gameCollider.Dead)
+        {
+            SetSpeedAfterExplosion();
+            MoveAfterCollision();
+        }
+        else if (_animatorController.CountHit == 1)
         {
             SetSpeedAfterCollision();
             MoveAfterCollision();
