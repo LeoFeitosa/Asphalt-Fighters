@@ -87,6 +87,7 @@ MonoBehaviour:
   _speed: 0.5
   _maxSpeed: 12
   _acceleration: 0.015
+  _widthToRevive: 1.6
   _maximumSpeedAfterExplosion: 1
   _maximumSpeedAfterCollision: 8
   _maximumSpeedAfterDoubleCollision: 4
