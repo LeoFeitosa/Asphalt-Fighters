@@ -16,6 +16,11 @@ public class PlayerAnimatorController : MonoBehaviour
     bool _enableRandom;
     int _direction;
 
+    [Header("Blink on colission")]
+    [SerializeField] float _delay = 3f;
+    [SerializeField] float _blink = 0.1f;
+    [SerializeField] int _count = 7;
+
     void Start()
     {
         _timeMove = 0;
@@ -114,8 +119,46 @@ public class PlayerAnimatorController : MonoBehaviour
 
     public void Explosion()
     {
+        Instantiate(_explosionsPrefab[Random.Range(0, _explosionsPrefab.Length)], transform.position, transform.rotation);
+
+        transform.position = Vector2.zero;
+
         GetComponentInChildren<SpriteRenderer>().enabled = false;
         GetComponentInChildren<BoxCollider2D>().enabled = false;
-        Instantiate(_explosionsPrefab[Random.Range(0, _explosionsPrefab.Length)], transform.position, transform.rotation);
+
+        StartCoroutine(Reposition());
     }
+
+    void RemoveExplosions()
+    {
+        GameObject[] explosions = GameObject.FindGameObjectsWithTag(TagsConstants.Explosions);
+
+        foreach (GameObject explosion in explosions)
+        {
+            Destroy(explosion);
+        }
+    }
+
+    IEnumerator Reposition()
+    {
+        yield return new WaitForSeconds(_delay);
+
+        for (int n = 0; n < _count; n++)
+        {
+            GetComponentInChildren<SpriteRenderer>().enabled = true;
+            yield return new WaitForSeconds(_blink);
+            GetComponentInChildren<SpriteRenderer>().enabled = false;
+            yield return new WaitForSeconds(_blink);
+        }
+
+        GetComponentInChildren<SpriteRenderer>().enabled = true;
+        GetComponentInChildren<BoxCollider2D>().enabled = true;
+
+        Debug.Log("Recentralizar");
+
+        RemoveExplosions();
+
+        yield return null;
+    }
+
 }
