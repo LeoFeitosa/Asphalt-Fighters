@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float _acceleration = 0.002f;
 
     [Header("After Collision")]
+    [SerializeField] float _widthToRevive;
     [SerializeField] float _maximumSpeedAfterExplosion;
     [SerializeField] float _maximumSpeedAfterCollision;
     [SerializeField] float _maximumSpeedAfterDoubleCollision;
@@ -113,7 +114,7 @@ public class PlayerController : MonoBehaviour
 
     void SetSpeed()
     {
-        if (_gameCollider.Dead)
+        if (_gameCollider.Dead && !_gameCollider.FinishedThePhase)
         {
             SetSpeedAfterExplosion();
             MoveAfterCollision();
@@ -159,14 +160,21 @@ public class PlayerController : MonoBehaviour
 
     void MoveAfterCollision()
     {
-        if (!_isMoveAfterCollision)
+        if (_gameCollider.Dead && !_gameCollider.FinishedThePhase)
         {
-            _isMoveAfterCollision = true;
-            _randomDirectionAfterCollision = Random.value;
+            _moveDirections = new Vector2(Random.Range(-_widthToRevive, _widthToRevive), _moveDirections.y);
         }
-        else if (_randomDirectionAfterCollision > 0)
+        else
         {
-            _moveDirections += ((_randomDirectionAfterCollision > 0.5f) ? Vector3.left : Vector3.right) * Time.deltaTime;
+            if (!_isMoveAfterCollision)
+            {
+                _isMoveAfterCollision = true;
+                _randomDirectionAfterCollision = Random.value;
+            }
+            else if (_randomDirectionAfterCollision > 0)
+            {
+                _moveDirections += ((_randomDirectionAfterCollision > 0.5f) ? Vector3.left : Vector3.right) * Time.deltaTime;
+            }
         }
     }
 
