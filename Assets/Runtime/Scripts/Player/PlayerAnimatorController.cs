@@ -121,8 +121,6 @@ public class PlayerAnimatorController : MonoBehaviour
     {
         Instantiate(_explosionsPrefab[Random.Range(0, _explosionsPrefab.Length)], transform.position, transform.rotation);
 
-        transform.position = Vector2.zero;
-
         GetComponentInChildren<SpriteRenderer>().enabled = false;
         GetComponentInChildren<BoxCollider2D>().enabled = false;
 
