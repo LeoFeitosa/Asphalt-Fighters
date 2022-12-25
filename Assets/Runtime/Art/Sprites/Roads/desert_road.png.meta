@@ -1,16 +1,7 @@
 fileFormatVersion: 2
-guid: c43bb12773cf04540aea0efc1288b083
+guid: aa2bb41668f04e87dadf9edee4171cac
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: 7094887773775264657
-    second: road_0
-  - first:
-      213: -4530216657470773902
-    second: road_1
-  - first:
-      213: -6253479298653041116
-    second: road_2
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -56,11 +47,11 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 500
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
@@ -90,19 +81,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -114,7 +93,19 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -125,64 +116,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: road_0
+      name: desert_road_0
       rect:
         serializedVersion: 2
-        x: 425
-        y: 0
-        width: 1686
-        height: 5000
+        x: 0
+        y: 56
+        width: 8
+        height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 19bf22507da167260800000000000000
-      internalID: 7094887773775264657
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: road_1
-      rect:
-        serializedVersion: 2
-        x: 2613
-        y: 0
-        width: 839
-        height: 5000
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 275a5efb3ff6121c0800000000000000
-      internalID: -4530216657470773902
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: road_2
-      rect:
-        serializedVersion: 2
-        x: 4048
-        y: 0
-        width: 527
-        height: 5000
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 42ec681d5bd2739a0800000000000000
-      internalID: -6253479298653041116
+      spriteID: fa18b3e7a310f30aa96d6d8a573ec82e
+      internalID: 529933542
       vertices: []
       indices: 
       edges: []
@@ -198,9 +147,70 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      road_2: -6253479298653041116
-      road_1: -4530216657470773902
-      road_0: 7094887773775264657
+      desert_road_40: 1885958149
+      desert_road_38: -657255121
+      desert_road_29: -1553762121
+      desert_road_32: 388490864
+      desert_road_60: -1654350477
+      desert_road_24: -1725581744
+      desert_road_47: -1906967996
+      desert_road_16: -1844115784
+      desert_road_15: -471192080
+      desert_road_53: -453633883
+      desert_road_43: 389645112
+      desert_road_42: -303969399
+      desert_road_44: -755312723
+      desert_road_49: 1110167623
+      desert_road_51: -378539773
+      desert_road_5: 321198437
+      desert_road_20: -1294451810
+      desert_road_57: -1048766043
+      desert_road_41: 1499855463
+      desert_road_0: 529933542
+      desert_road_9: -1148479198
+      desert_road_13: -1847826981
+      desert_road_34: -466160567
+      desert_road_26: -355180782
+      desert_road_59: -989291258
+      desert_road_37: -905356706
+      desert_road_10: -292824661
+      desert_road_55: 1722340506
+      desert_road_21: -1135385339
+      desert_road_27: -567502796
+      desert_road_46: 1068097078
+      desert_road_50: 1544675423
+      desert_road_7: -530222442
+      desert_road_6: 1216306338
+      desert_road_8: 47665660
+      desert_road_23: -1299854551
+      desert_road_45: -1661825149
+      desert_road_28: 1141368300
+      desert_road_62: 845996375
+      desert_road_52: 974565529
+      desert_road_54: -1454840204
+      desert_road_11: -1598931661
+      desert_road_17: -1612462522
+      desert_road_18: -1303845114
+      desert_road_25: -1159151479
+      desert_road_12: 210392590
+      desert_road_35: 2039685749
+      desert_road_58: -210901479
+      desert_road_31: 700109001
+      desert_road_61: 1910700950
+      desert_road_36: 1603667310
+      desert_road_19: 1168536894
+      desert_road_22: 322001899
+      desert_road_30: -1131262701
+      desert_road_48: 388569286
+      desert_road_2: -1566482179
+      desert_road_33: -1995993116
+      desert_road_63: 1110464582
+      desert_road_56: 526175968
+      desert_road_3: 1901044972
+      desert_road_4: 1788150122
+      desert_road_39: -580490750
+      desert_road_1: 1151185487
+      desert_road_14: -148471954
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

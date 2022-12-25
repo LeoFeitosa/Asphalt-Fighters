@@ -1,16 +1,7 @@
 fileFormatVersion: 2
-guid: c43bb12773cf04540aea0efc1288b083
+guid: 2fba19a1a48874a2dae26feaffd9d070
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: 7094887773775264657
-    second: road_0
-  - first:
-      213: -4530216657470773902
-    second: road_1
-  - first:
-      213: -6253479298653041116
-    second: road_2
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -56,11 +47,11 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 500
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
@@ -90,19 +81,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -114,7 +93,19 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -125,64 +116,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: road_0
+      name: winter_road_0
       rect:
         serializedVersion: 2
-        x: 425
-        y: 0
-        width: 1686
-        height: 5000
+        x: 0
+        y: 56
+        width: 8
+        height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 19bf22507da167260800000000000000
-      internalID: 7094887773775264657
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: road_1
-      rect:
-        serializedVersion: 2
-        x: 2613
-        y: 0
-        width: 839
-        height: 5000
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 275a5efb3ff6121c0800000000000000
-      internalID: -4530216657470773902
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: road_2
-      rect:
-        serializedVersion: 2
-        x: 4048
-        y: 0
-        width: 527
-        height: 5000
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 42ec681d5bd2739a0800000000000000
-      internalID: -6253479298653041116
+      spriteID: 35dbd5d6ef9326d4f8986b861307eb43
+      internalID: -175232957
       vertices: []
       indices: 
       edges: []
@@ -198,9 +147,70 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      road_2: -6253479298653041116
-      road_1: -4530216657470773902
-      road_0: 7094887773775264657
+      winter_road_12: 768021265
+      winter_road_16: 1613267370
+      winter_road_1: -1690407280
+      winter_road_31: 1434674705
+      winter_road_24: -1433457587
+      winter_road_11: -1076655614
+      winter_road_13: -1360627087
+      winter_road_45: 2049478207
+      winter_road_46: -1169892358
+      winter_road_56: 941765750
+      winter_road_62: 280642151
+      winter_road_63: -1749719646
+      winter_road_0: -175232957
+      winter_road_21: 831812313
+      winter_road_35: -159471651
+      winter_road_3: -725787826
+      winter_road_44: 33424441
+      winter_road_15: 555728127
+      winter_road_4: 211012037
+      winter_road_28: -641630060
+      winter_road_36: -1402927845
+      winter_road_54: -757954297
+      winter_road_33: 1470688578
+      winter_road_41: -2111337828
+      winter_road_40: 1811810522
+      winter_road_37: -2074971858
+      winter_road_55: 1257865151
+      winter_road_47: -1578061210
+      winter_road_20: 1480660456
+      winter_road_48: 1478933583
+      winter_road_29: -1112421315
+      winter_road_2: 1416255157
+      winter_road_5: -318043921
+      winter_road_23: 1839718002
+      winter_road_27: -1070682612
+      winter_road_51: 139581286
+      winter_road_39: 657692245
+      winter_road_42: -2021257347
+      winter_road_49: 1068811607
+      winter_road_25: 1677531443
+      winter_road_32: 1009165816
+      winter_road_60: 1878032425
+      winter_road_14: -958868485
+      winter_road_22: -113547797
+      winter_road_58: 180970303
+      winter_road_38: 1038276010
+      winter_road_61: 1433022573
+      winter_road_50: -339320610
+      winter_road_18: -132468949
+      winter_road_52: -1948935132
+      winter_road_53: 578312913
+      winter_road_26: 1731832274
+      winter_road_9: 1107893254
+      winter_road_17: -905809357
+      winter_road_34: 1361210287
+      winter_road_7: 1045271283
+      winter_road_6: 1719328458
+      winter_road_30: 891741690
+      winter_road_59: 1870361221
+      winter_road_10: 310734427
+      winter_road_8: -77000290
+      winter_road_43: 1200617463
+      winter_road_57: -1013169480
+      winter_road_19: -1733066697
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
