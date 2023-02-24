@@ -23,14 +23,14 @@ public class Scenario : MonoBehaviour
     {
         RandomDetails(_prefabDetails);
 
-        float positionY = gameObject.transform.position.y;
+        float positionY = this.gameObject.transform.position.y;
 
         foreach (GameObject _detail in _prefabDetails)
         {
             Vector3 borderSize = _detail.GetComponentInChildren<SpriteRenderer>().bounds.size;
             positionY += borderSize.y;
             
-            float positionX = gameObject.transform.position.x;
+            float positionX = this.gameObject.transform.position.x;
             float currentPositionY = positionY - borderSize.y;
 
             _detail.GetComponent<Transform>().position = new Vector2(positionX, currentPositionY);
@@ -57,10 +57,5 @@ public class Scenario : MonoBehaviour
             scaleDetail.y, 
             scaleDetail.z
         );
-    }
-
-    void OnBecameInvisible()
-    {
-        Destroy(this.gameObject);
     }
 }
