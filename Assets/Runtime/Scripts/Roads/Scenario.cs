@@ -6,17 +6,33 @@ public class Scenario : MonoBehaviour
 {
     public GameObject _prefabBorder;
     public Object[] _prefabDetails;
+    float _initialPositionY = 0;
+
+    MovementController _movementController;
+
+    void Awake()
+    {
+        _movementController = FindObjectOfType<MovementController>();
+    }
 
     // Start is called before the first frame update
     void Start()
     {
+        _initialPositionY = this.transform.position.y;
         MountScenario();
     }
 
     // Update is called once per frame
     void Update()
     {
-         
+         MoveHorizontal();
+    }
+
+    void MoveHorizontal()
+    {
+        if(_movementController) {
+            this.transform.position = new Vector3(this.transform.position.x, _movementController.GetComponent<Transform>().position.y + _initialPositionY, this.transform.position.z);
+        }
     }
 
     void MountScenario() 
@@ -57,5 +73,10 @@ public class Scenario : MonoBehaviour
             scaleDetail.y, 
             scaleDetail.z
         );
+    }
+
+    void OnBecameInvisible()
+    {
+        Destroy(this.gameObject);
     }
 }
