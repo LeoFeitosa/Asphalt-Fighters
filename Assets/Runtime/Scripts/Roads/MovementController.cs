@@ -5,7 +5,8 @@ using UnityEngine;
 public class MovementController : MonoBehaviour
 {
     [SerializeField] Object _prefabRoad;
-    [SerializeField] Object _scenario;
+    [SerializeField] GameObject _scenario;
+    GameObject _instancedScenario;
 
     PlayerController _playerController;
     PlayerCollidersController _playerCollider;
@@ -27,7 +28,7 @@ public class MovementController : MonoBehaviour
     {
         _position = transform.position;
         _currentSpeed = _playerController.Velocity;
-        Instantiate(_scenario, new Vector3(0, this.transform.position.y + _fullSize * _numberOfChildObjects, 0), Quaternion.identity);
+        _instancedScenario = Instantiate(_scenario, new Vector3(0, this.transform.position.y + _fullSize * _numberOfChildObjects, 0), Quaternion.identity);
     }
 
     void Update()
@@ -45,6 +46,7 @@ public class MovementController : MonoBehaviour
             _currentSpeed = _playerController.Velocity;
             _position.y -= _currentSpeed * Time.deltaTime;
             this.transform.position = _position;
+            _instancedScenario.transform.position = _position;
         }
     }
 
