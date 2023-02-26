@@ -25,17 +25,22 @@ public class Scenario : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-         MoveHorizontal();
+        MoveHorizontal();
     }
 
     void MoveHorizontal()
     {
-        if(_movementController) {
-            this.transform.position = new Vector3(this.transform.position.x, _movementController.GetComponent<Transform>().position.y + _initialPositionY, this.transform.position.z);
+        if (_movementController)
+        {
+            this.transform.position = new Vector3(
+                this.transform.position.x,
+                _movementController.GetComponent<Transform>().position.y + _initialPositionY,
+                this.transform.position.z
+            );
         }
     }
 
-    void MountScenario() 
+    void MountScenario()
     {
         RandomDetails(_prefabDetails);
 
@@ -45,7 +50,7 @@ public class Scenario : MonoBehaviour
         {
             Vector3 borderSize = _detail.GetComponentInChildren<SpriteRenderer>().bounds.size;
             positionY += borderSize.y;
-            
+
             float positionX = this.gameObject.transform.position.x;
             float currentPositionY = positionY - borderSize.y;
 
@@ -53,7 +58,7 @@ public class Scenario : MonoBehaviour
         }
     }
 
-    void RandomDetails(Object[] objects) 
+    void RandomDetails(Object[] objects)
     {
         for (int i = 0; i < objects.Length; i++)
         {
@@ -69,8 +74,8 @@ public class Scenario : MonoBehaviour
     {
         Vector3 scaleDetail = objectDetail.GetComponent<Transform>().localScale;
         objectDetail.GetComponent<Transform>().localScale = new Vector3(
-            scaleDetail.x * -1, 
-            scaleDetail.y, 
+            scaleDetail.x * -1,
+            scaleDetail.y,
             scaleDetail.z
         );
     }
