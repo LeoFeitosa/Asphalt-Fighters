@@ -4,11 +4,8 @@ using UnityEngine;
 
 public class MovementController : MonoBehaviour
 {
-    [SerializeField]
-    Object _prefabRoad;
-
-    [SerializeField]
-    GameObject _scenario;
+    [SerializeField] Object _prefabRoad;
+    [SerializeField] GameObject _scenario;
     GameObject _instancedScenario;
 
     PlayerController _playerController;
@@ -31,11 +28,7 @@ public class MovementController : MonoBehaviour
     {
         _position = transform.position;
         _currentSpeed = _playerController.Velocity;
-        _instancedScenario = Instantiate(
-            _scenario,
-            new Vector3(0, this.transform.position.y + _fullSize * _numberOfChildObjects, 0),
-            Quaternion.identity
-        );
+        _instancedScenario = Instantiate(_scenario, new Vector3(0, this.transform.position.y + _fullSize * _numberOfChildObjects, 0), Quaternion.identity);
     }
 
     void Update()
@@ -59,18 +52,10 @@ public class MovementController : MonoBehaviour
 
     void InstantiateNewRoad()
     {
-        if (
-            (int)Mathf.Abs(this.transform.position.y) == _fullSize
-            && _permissionToInstantiate
-            && !_playerCollider.FinishedThePhase
-        )
+        if ((int)Mathf.Abs(this.transform.position.y) == _fullSize && _permissionToInstantiate && !_playerCollider.FinishedThePhase)
         {
             DisableInstantiate();
-            Instantiate(
-                _prefabRoad,
-                new Vector3(0, this.transform.position.y + _fullSize * _numberOfChildObjects, 0),
-                Quaternion.identity
-            );
+            Instantiate(_prefabRoad, new Vector3(0, this.transform.position.y + _fullSize * _numberOfChildObjects, 0), Quaternion.identity);
             return;
         }
     }
